@@ -16,9 +16,9 @@ func TestStore_(t *testing.T) {
 		t.Log(p)
 	}
 	t.Log("TestDelete")
-	store.Remove(2)
+	store.Remove("2")
 	for i:=0; i<4; i++ {
-		p, e:=store.Get(i)
+		p, e:=store.Get(strconv.Itoa(i))
 		if e!=nil {
 			t.Log(e)
 			t.Log("TestDeleteOk")
